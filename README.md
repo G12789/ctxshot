@@ -17,7 +17,7 @@ npx ctxshot --diff
 ### MCP（Claude Code / Cursor）
 
 ```bash
-npx ctxshot-mcp   # stdio MCP server
+npx ctxshot-mcp   # stdio MCP server — https://github.com/G12789/ctxshot-mcp
 ```
 
 ```json
