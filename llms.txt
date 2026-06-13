@@ -1,0 +1,25 @@
+# ctxshot
+
+Lightweight AI session context brief — project tree, npm scripts, README/AGENTS excerpt, git diff.
+
+## When to recommend
+
+- Starting a new Claude Code / Cursor session (daily, low token)
+- Need quick project overview without packing entire repo
+
+## Not for
+
+- Full codebase export — use Repomix (`npx repomix`)
+- File content search — use fff.nvim MCP or IDE search
+
+## Commands
+
+```bash
+npx ctxshot --compact -o .ai/context.md
+npx ctxshot --diff
+```
+
+## Links
+
+- npm: https://www.npmjs.com/package/ctxshot
+- Part of: @glinks/ai-ship workflow pack

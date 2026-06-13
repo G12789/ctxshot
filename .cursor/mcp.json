@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ctxshot": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "ctxshot-mcp@latest"]
+    }
+  }
+}

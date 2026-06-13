@@ -1,0 +1,56 @@
+{
+  "name": "ctxshot",
+  "version": "0.2.0",
+  "description": "Pack your repo into a compact AI-ready context brief in 3 seconds — before every Claude / Cursor session.",
+  "type": "module",
+  "bin": {
+    "ctxshot": "dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/cli.js",
+    "./core": "./dist/core/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "llms.txt"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "prepublishOnly": "npm run build && npm run test:smoke",
+    "test": "node --test",
+    "test:smoke": "node scripts/ci-smoke.mjs",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "keywords": [
+    "ai",
+    "cursor",
+    "claude",
+    "context",
+    "developer-tools",
+    "llm",
+    "productivity",
+    "mcp"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G12789/ctxshot.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
