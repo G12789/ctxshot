@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-label="ctxshot vs Repomix benchmark">
+  <defs>
+    <style>
+      .title { font: 700 22px system-ui, sans-serif; fill: #111827; }
+      .subtitle { font: 400 14px system-ui, sans-serif; fill: #6b7280; }
+      .label { font: 600 13px system-ui, sans-serif; fill: #374151; }
+      .value { font: 500 12px system-ui, sans-serif; fill: #111827; }
+      .axis { font: 12px system-ui, sans-serif; fill: #9ca3af; }
+      .note { font: 12px system-ui, sans-serif; fill: #047857; }
+      .noteTitle { font: 600 13px system-ui, sans-serif; fill: #065f46; }
+    </style>
+  </defs>
+  <rect width="920" height="520" fill="#fafafa"/>
+  <text x="40" y="42" class="title">ctxshot vs Repomix (same repo benchmark)</text>
+  <text x="40" y="68" class="subtitle">2026-06-13 | npm run benchmark | token est. = chars / 4</text>
+
+  <text x="40" y="108" class="label">Estimated tokens (lower is better for daily sessions)</text>
+  <line x1="40" y1="320" x2="440" y2="320" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="40" y="340" class="axis">0</text>
+  <text x="200" y="340" class="axis">2k</text>
+  <text x="360" y="340" class="axis">4k</text>
+  <text x="420" y="340" class="axis">7k</text>
+
+  <rect x="70" y="248" width="48" height="72" rx="6" fill="#10b981"/>
+  <text x="94" y="238" text-anchor="middle" class="value">423</text>
+  <text x="94" y="362" text-anchor="middle" class="axis">ctxshot</text>
+
+  <rect x="170" y="222" width="48" height="98" rx="6" fill="#f59e0b"/>
+  <text x="194" y="212" text-anchor="middle" class="value">685</text>
+  <text x="194" y="362" text-anchor="middle" class="axis">README</text>
+
+  <rect x="270" y="40" width="48" height="280" rx="6" fill="#ef4444"/>
+  <text x="294" y="30" text-anchor="middle" class="value">7,023</text>
+  <text x="294" y="362" text-anchor="middle" class="axis">Repomix</text>
+
+  <text x="480" y="108" class="label">Time ms (lower is better)</text>
+  <line x1="480" y1="320" x2="880" y2="320" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="480" y="340" class="axis">0</text>
+  <text x="620" y="340" class="axis">2s</text>
+  <text x="760" y="340" class="axis">4s</text>
+
+  <rect x="510" y="304" width="48" height="16" rx="6" fill="#10b981"/>
+  <text x="534" y="294" text-anchor="middle" class="value">356ms</text>
+  <text x="534" y="362" text-anchor="middle" class="axis">ctxshot</text>
+
+  <rect x="610" y="319" width="48" height="1" rx="1" fill="#f59e0b"/>
+  <text x="634" y="294" text-anchor="middle" class="value">&lt;1ms</text>
+  <text x="634" y="362" text-anchor="middle" class="axis">README</text>
+
+  <rect x="710" y="120" width="48" height="200" rx="6" fill="#ef4444"/>
+  <text x="734" y="110" text-anchor="middle" class="value">3,635ms</text>
+  <text x="734" y="362" text-anchor="middle" class="axis">Repomix</text>
+
+  <rect x="40" y="390" width="840" height="100" rx="10" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="60" y="420" class="noteTitle">Takeaway</text>
+  <text x="60" y="445" class="note">ctxshot: ~423 tokens / ~0.35s  daily session brief, @.ai/context.md</text>
+  <text x="60" y="468" class="note">Repomix: ~7k tokens / ~3.6s on small repos; 100k+ on large  full-code refactor</text>
+  <text x="60" y="491" class="note">Complementary, not competing: briefing vs full codebase pack</text>
+</svg>

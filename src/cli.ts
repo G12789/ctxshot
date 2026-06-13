@@ -5,7 +5,7 @@ import { resolve, dirname } from "node:path";
 import pc from "picocolors";
 import { packContext } from "./core/pack.js";
 
-const VERSION = "0.2.0";
+const VERSION = "0.2.1";
 
 function help(): void {
   console.log(`

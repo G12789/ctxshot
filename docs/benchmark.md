@@ -1,7 +1,7 @@
 # ctxshot vs Repomix（实测）
 
 > 仓库：`ctxshot` 自身 · 2026-06-13 · `node scripts/benchmark.mjs`  
-> 配图：`../../ctxshot推广物料/assets/benchmark-chart.svg`
+> 配图：[benchmark-chart.svg](./benchmark-chart.svg)
 
 | Tool | 耗时 | 估 token | 适合 |
 |---|---:|---:|---|
