@@ -34,15 +34,22 @@ export function loadGitignore(root: string): Set<string> {
   return patterns;
 }
 
+function globToRegExp(pattern: string): RegExp {
+  let body = "";
+  for (const ch of pattern) {
+    if (ch === "*") body += ".*";
+    else if (/[+?^${}()|[\]\\.]/.test(ch)) body += `\\${ch}`;
+    else body += ch;
+  }
+  return new RegExp(`^${body}$`);
+}
+
 function matchPattern(name: string, pattern: string): boolean {
   if (pattern.startsWith("*.")) {
     return name.endsWith(pattern.slice(1));
   }
   if (pattern.includes("*")) {
-    const re = new RegExp(
-      "^" + pattern.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$",
-    );
-    return re.test(name);
+    return globToRegExp(pattern).test(name);
   }
   return (
     name === pattern ||

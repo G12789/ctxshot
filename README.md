@@ -63,6 +63,20 @@ npm run benchmark -- /path/to/your/repo
 
 ---
 
+## 会话记忆工作流（配合 ship-skills）
+
+单独 `ctxshot` 只解决「项目结构快照」。**重启不丢、记得上次在干啥** 需要三层文件 + Hook：
+
+| 文件 | 命令 / 机制 |
+|------|-------------|
+| `.ai/focus.md` | 你维护「正在做什么」 |
+| `.ai/handoff.md` | SessionEnd 自动写 |
+| `.ai/context.md` | `npx ctxshot --compact --diff --depth 3 --max 120 -o .ai/context.md` |
+
+一键：`npx ship-skills init` — 见 [ai-ship/docs/STACK.md](https://github.com/G12789/ai-ship/blob/master/docs/STACK.md)。
+
+---
+
 ## 快速开始
 
 ```bash

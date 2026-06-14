@@ -1,6 +1,6 @@
 {
   "name": "ctxshot",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Pack your repo into a compact AI-ready context brief in 3 seconds — before every Claude / Cursor session.",
   "type": "module",
   "bin": {

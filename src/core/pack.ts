@@ -31,8 +31,8 @@ export function packContext(opts: PackOptions = {}): PackResult {
   const root = resolve(opts.root ?? process.cwd());
   const compact = opts.compact ?? false;
   const diff = opts.diff ?? false;
-  const depth = opts.depth ?? (compact ? 2 : 3);
-  const maxEntries = opts.maxEntries ?? (compact ? 50 : 80);
+  const depth = opts.depth ?? (compact ? 3 : 3);
+  const maxEntries = opts.maxEntries ?? (compact ? 80 : 120);
 
   const tree = buildTree({ root, maxDepth: depth, maxEntries });
   const manifests = readManifests(root);
